@@ -38,9 +38,9 @@ body {
 
 #type{
     font-family: Montserrat;
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size:.8rem;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    font-size:.7rem;
     color:hsl(228, 12%, 48%)
 }
 
@@ -131,14 +131,24 @@ body {
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
+        filter:brightness(90%)
     }
 
     #content{
         width:50%;
-        padding:2.25rem;
+        padding:2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #heading{
+        padding:1.25rem 0
+    }
+
+    #description{
+        font-size:.85rem;
+        line-height: 2;
     }
 
     #price{
