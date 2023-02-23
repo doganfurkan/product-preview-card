@@ -96,6 +96,15 @@ body {
     gap:.5rem
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding:0 0 1rem
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
 @media screen and (min-width:700px) {
 
     body{
@@ -160,4 +169,10 @@ body {
         cursor: pointer;
         background: hsl(158, 36%, 25%);
     }
+
+    .attribution {
+        position: fixed;
+        bottom:0;
+        width: 100%;
+      }
 }
