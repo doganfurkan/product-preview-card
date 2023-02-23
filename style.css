@@ -1,0 +1,152 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(Fraunces.woff2);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+#mobile-img{
+    width:100%;
+    border-radius:1rem 1rem 0 0;
+    vertical-align: bottom;
+}
+
+#desktop-img{
+    display: none;
+}
+
+#content{
+    padding:1.5rem;
+}
+
+#type{
+    font-family: Montserrat;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size:.8rem;
+    color:hsl(228, 12%, 48%)
+}
+
+#heading{
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size:2rem;
+    line-height: 1.1;
+    padding:1rem 0;
+    color:hsl(212, 21%, 14%);
+}
+
+#description{
+    font-family: Montserrat;
+    color:hsl(228, 12%, 48%);
+    font-size:.9rem;
+    line-height: 1.5;
+}
+
+#price{
+    margin:1.25rem 0 1rem;
+    display: flex;
+    gap:1.25rem;
+    align-items: center;
+}
+
+#newPrice{
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size:2rem;
+    color:hsl(158, 36%, 37%)
+}
+
+#oldPrice{
+    font-family: Montserrat;
+    color:hsl(228, 12%, 48%);
+    font-weight: 500;
+    text-decoration:line-through;
+    font-size:.85rem;
+}
+
+#addToCart{
+    background: hsl(158, 36%, 37%);
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Montserrat;
+    font-weight: 700;
+    font-size:.9rem;
+    border-radius: .7rem;
+    padding:1rem;
+    gap:.5rem
+}
+
+@media screen and (min-width:700px) {
+
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #card{
+        max-width:600px;
+        flex-direction: row;
+        margin:1rem auto;
+    }
+
+    #img{
+        width:50%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #mobile-img{
+        display:none;
+    }
+
+    #desktop-img{
+        display:block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem 0 0 1rem;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    #content{
+        width:50%;
+        padding:2.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #price{
+        margin:1.5rem 0
+    }
+
+    #addToCart:hover{
+        cursor: pointer;
+        background: hsl(158, 36%, 25%);
+    }
+}
